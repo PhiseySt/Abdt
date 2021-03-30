@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexadecimalAddition", "HexadecimalAddition.csproj", "{322798C7-51F2-45B1-86C7-1F0A60A6B70A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{322798C7-51F2-45B1-86C7-1F0A60A6B70A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{322798C7-51F2-45B1-86C7-1F0A60A6B70A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{322798C7-51F2-45B1-86C7-1F0A60A6B70A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{322798C7-51F2-45B1-86C7-1F0A60A6B70A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A60A72F-08A3-45D4-A2F6-F5FC5DA5E17B}
+	EndGlobalSection
+EndGlobal

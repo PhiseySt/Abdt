@@ -1,0 +1,16 @@
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw1\HexadecimalAddition\bin\Debug\net5.0\HexadecimalAddition.exe
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw1\HexadecimalAddition\bin\Debug\net5.0\HexadecimalAddition.deps.json
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw1\HexadecimalAddition\bin\Debug\net5.0\HexadecimalAddition.runtimeconfig.json
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw1\HexadecimalAddition\bin\Debug\net5.0\HexadecimalAddition.runtimeconfig.dev.json
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw1\HexadecimalAddition\bin\Debug\net5.0\HexadecimalAddition.dll
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw1\HexadecimalAddition\bin\Debug\net5.0\ref\HexadecimalAddition.dll
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw1\HexadecimalAddition\bin\Debug\net5.0\HexadecimalAddition.pdb
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw1\HexadecimalAddition\obj\Debug\net5.0\HexadecimalAddition.csprojAssemblyReference.cache
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw1\HexadecimalAddition\obj\Debug\net5.0\HexadecimalAddition.GeneratedMSBuildEditorConfig.editorconfig
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw1\HexadecimalAddition\obj\Debug\net5.0\HexadecimalAddition.AssemblyInfoInputs.cache
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw1\HexadecimalAddition\obj\Debug\net5.0\HexadecimalAddition.AssemblyInfo.cs
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw1\HexadecimalAddition\obj\Debug\net5.0\HexadecimalAddition.csproj.CoreCompileInputs.cache
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw1\HexadecimalAddition\obj\Debug\net5.0\HexadecimalAddition.dll
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw1\HexadecimalAddition\obj\Debug\net5.0\ref\HexadecimalAddition.dll
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw1\HexadecimalAddition\obj\Debug\net5.0\HexadecimalAddition.pdb
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw1\HexadecimalAddition\obj\Debug\net5.0\HexadecimalAddition.genruntimeconfig.cache
