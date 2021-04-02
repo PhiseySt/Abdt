@@ -1,0 +1,13 @@
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\Expessions\obj\Debug\netcoreapp3.1\Expessions.csprojAssemblyReference.cache
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\Expessions\obj\Debug\netcoreapp3.1\Expessions.AssemblyInfoInputs.cache
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\Expessions\obj\Debug\netcoreapp3.1\Expessions.AssemblyInfo.cs
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\Expessions\obj\Debug\netcoreapp3.1\Expessions.csproj.CoreCompileInputs.cache
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\Expessions\bin\Debug\netcoreapp3.1\Expessions.exe
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\Expessions\bin\Debug\netcoreapp3.1\Expessions.deps.json
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\Expessions\bin\Debug\netcoreapp3.1\Expessions.runtimeconfig.json
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\Expessions\bin\Debug\netcoreapp3.1\Expessions.runtimeconfig.dev.json
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\Expessions\bin\Debug\netcoreapp3.1\Expessions.dll
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\Expessions\bin\Debug\netcoreapp3.1\Expessions.pdb
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\Expessions\obj\Debug\netcoreapp3.1\Expessions.dll
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\Expessions\obj\Debug\netcoreapp3.1\Expessions.pdb
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\Expessions\obj\Debug\netcoreapp3.1\Expessions.genruntimeconfig.cache
