@@ -1,0 +1,13 @@
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw3\CacheLocalDisk\bin\Debug\netcoreapp3.1\CacheLocalDisk.exe
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw3\CacheLocalDisk\bin\Debug\netcoreapp3.1\CacheLocalDisk.deps.json
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw3\CacheLocalDisk\bin\Debug\netcoreapp3.1\CacheLocalDisk.runtimeconfig.json
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw3\CacheLocalDisk\bin\Debug\netcoreapp3.1\CacheLocalDisk.runtimeconfig.dev.json
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw3\CacheLocalDisk\bin\Debug\netcoreapp3.1\CacheLocalDisk.dll
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw3\CacheLocalDisk\bin\Debug\netcoreapp3.1\CacheLocalDisk.pdb
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw3\CacheLocalDisk\obj\Debug\netcoreapp3.1\CacheLocalDisk.csprojAssemblyReference.cache
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw3\CacheLocalDisk\obj\Debug\netcoreapp3.1\CacheLocalDisk.AssemblyInfoInputs.cache
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw3\CacheLocalDisk\obj\Debug\netcoreapp3.1\CacheLocalDisk.AssemblyInfo.cs
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw3\CacheLocalDisk\obj\Debug\netcoreapp3.1\CacheLocalDisk.csproj.CoreCompileInputs.cache
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw3\CacheLocalDisk\obj\Debug\netcoreapp3.1\CacheLocalDisk.dll
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw3\CacheLocalDisk\obj\Debug\netcoreapp3.1\CacheLocalDisk.pdb
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw3\CacheLocalDisk\obj\Debug\netcoreapp3.1\CacheLocalDisk.genruntimeconfig.cache
