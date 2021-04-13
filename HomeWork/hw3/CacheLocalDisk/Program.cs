@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -21,10 +22,11 @@ namespace CacheLocalDisk
         // Вывод на экран раз в 2 минуты
         private const int WriteTimerInterval = 120000;
         private static Timer _writeTimer;
+        private static BackgroundWorker WorkeWorkflow = new BackgroundWorker {WorkerReportsProgress = true, WorkerSupportsCancellation = true};
 
 
 
-        static void GetAllFiles(string path, ConcurrentBag<string> files)
+    static void GetAllFiles(string path, ConcurrentBag<string> files)
         {
             try
             {
@@ -67,18 +69,18 @@ namespace CacheLocalDisk
 
         private static void OnTimedEvent(object source, ElapsedEventArgs e)
         {
-            Workflow();
+            WorkeWorkflow.RunWorkerAsync();
         }
 
         static void Main(string[] args)
         {
-            Workflow();
-            _isFirstStart = false;
+            WorkeWorkflow.DoWork += Workflow;
+            WorkeWorkflow.RunWorkerAsync();
             SetWriteTimer();
             Console.ReadKey();
         }
 
-        private static void Workflow()
+        private static void Workflow(object sender, DoWorkEventArgs e)
         {
             Console.Clear();
             if (IsNeedStartReading() || _isFirstStart)
@@ -86,6 +88,7 @@ namespace CacheLocalDisk
                 _listAllFiles.Clear();
                 GetAllFiles(DiskName, _listAllFiles);
             }
+            if (_isFirstStart) _isFirstStart = false;
             PrintFilesSpecExtension(FileExtension);
         }
 
