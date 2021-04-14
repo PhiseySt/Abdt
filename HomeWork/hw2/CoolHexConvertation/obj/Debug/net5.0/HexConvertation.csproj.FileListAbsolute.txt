@@ -1,0 +1,16 @@
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\CoolHexConvertation\bin\Debug\net5.0\HexConvertation.exe
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\CoolHexConvertation\bin\Debug\net5.0\HexConvertation.deps.json
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\CoolHexConvertation\bin\Debug\net5.0\HexConvertation.runtimeconfig.json
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\CoolHexConvertation\bin\Debug\net5.0\HexConvertation.runtimeconfig.dev.json
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\CoolHexConvertation\bin\Debug\net5.0\HexConvertation.dll
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\CoolHexConvertation\bin\Debug\net5.0\ref\HexConvertation.dll
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\CoolHexConvertation\bin\Debug\net5.0\HexConvertation.pdb
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\CoolHexConvertation\obj\Debug\net5.0\HexConvertation.csprojAssemblyReference.cache
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\CoolHexConvertation\obj\Debug\net5.0\HexConvertation.GeneratedMSBuildEditorConfig.editorconfig
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\CoolHexConvertation\obj\Debug\net5.0\HexConvertation.AssemblyInfoInputs.cache
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\CoolHexConvertation\obj\Debug\net5.0\HexConvertation.AssemblyInfo.cs
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\CoolHexConvertation\obj\Debug\net5.0\HexConvertation.csproj.CoreCompileInputs.cache
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\CoolHexConvertation\obj\Debug\net5.0\HexConvertation.dll
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\CoolHexConvertation\obj\Debug\net5.0\ref\HexConvertation.dll
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\CoolHexConvertation\obj\Debug\net5.0\HexConvertation.pdb
+D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw2\CoolHexConvertation\obj\Debug\net5.0\HexConvertation.genruntimeconfig.cache
