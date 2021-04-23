@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TextProcessing</name>
+    </assembly>
+    <members>
+        <member name="T:TextProcessing.Controllers.FindServiceController">
+            <summary>
+            FindServiceController
+            </summary>
+        </member>
+        <member name="M:TextProcessing.Controllers.FindServiceController.GetListTexts">
+            <summary>
+            Получить список всех текстов из локального хранилища22
+            </summary>
+        </member>
+        <member name="T:TextProcessing.Controllers.TextServiceController">
+            <summary>
+            TextServiceController
+            </summary>
+        </member>
+        <member name="M:TextProcessing.Controllers.TextServiceController.GetListTexts">
+            <summary>
+            Получить список всех текстов из локального хранилища
+            </summary>
+        </member>
+        <member name="M:TextProcessing.Controllers.TextServiceController.GetTextById(System.Int32)">
+            <summary>
+            Получить текст из локального хранилища по id
+            </summary>
+        </member>
+        <member name="M:TextProcessing.Controllers.TextServiceController.PostText(System.String)">
+            <summary>
+            Сохранить текст в локальное хранилище
+            </summary>
+        </member>
+        <member name="M:TextProcessing.Controllers.TextServiceController.UploadFile(Microsoft.AspNetCore.Http.IFormFile,System.Threading.CancellationToken)">
+            <summary>
+            Загрузить текстовый файл с компьютера в локальное хранилище
+            </summary>
+        </member>
+        <member name="M:TextProcessing.Controllers.TextServiceController.UploadFileUrl(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Загрузить текстовый файл по url ссылке в локальное хранилище
+            Пример текстового файла: https://filesamples.com/samples/document/txt/sample3.txt
+            </summary>
+        </member>
+    </members>
+</doc>
