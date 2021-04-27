@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using TextProcessing.StorageData;
 
 namespace TextProcessing.Controllers
@@ -30,9 +31,10 @@ namespace TextProcessing.Controllers
         /// <summary>
         /// Получить текст из локального хранилища по id
         /// </summary>
+        /// <param name="id">Универсальный идентификатор текста</param>
         [Route("api/Get/Text/{id}")]
         [HttpGet]
-        public string GetTextById(int id)
+        public string GetTextById([BindRequired] int id)
         {
             return Storage.StorageTexts.Where(item => item.Key == id).Select(d => d.Value).FirstOrDefault();
         }
@@ -40,9 +42,10 @@ namespace TextProcessing.Controllers
         /// <summary>
         /// Сохранить текст в локальное хранилище
         /// </summary>
+        /// <param name="info">Текст для сохранения в локальном хранилище</param>
         [Route("api/Post/Text")]
         [HttpPost]
-        public void PostText(string info)
+        public void PostText([BindRequired] string info)
         {
             var id = Storage.StorageTexts.Count > 0 ? Storage.GetNextIdStorageStrings : 1;
             Storage.StorageTexts.Add(id, info);
@@ -51,11 +54,12 @@ namespace TextProcessing.Controllers
         /// <summary>
         /// Загрузить текстовый файл с компьютера в локальное хранилище
         /// </summary>
+        /// <param name="file">Файл для загрузки в хранилище</param>
         [HttpPost]
         [Route("api/Upload/File")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> UploadFile(IFormFile file, CancellationToken cancellationToken)
+        public async Task<IActionResult> UploadFile([BindRequired] IFormFile file, CancellationToken cancellationToken)
         {
             if (file.Length > 0)
             {
@@ -74,11 +78,12 @@ namespace TextProcessing.Controllers
         /// Загрузить текстовый файл по url ссылке в локальное хранилище
         /// Пример текстового файла: https://filesamples.com/samples/document/txt/sample3.txt
         /// </summary>
+        /// <param name="file">Ccылка на url для загрузки файла в хранилище</param>
         [HttpPost]
         [Route("api/Upload/Url")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> UploadFileUrl(string url, CancellationToken cancellationToken)
+        public async Task<IActionResult> UploadFileUrl([BindRequired] string url, CancellationToken cancellationToken)
         {
             if (url.Length > 0)
             {
@@ -141,8 +146,7 @@ namespace TextProcessing.Controllers
                     byte[] array = new byte[fstream.Length];
 
                     fstream.Read(array, 0, array.Length);
-                    var id = Storage.StorageBinaryFiles.Count > 0 ? Storage.GetNextIdStorageBinaryFiles : 1;
-                    Storage.StorageBinaryFiles.Add(id, array);
+                    Storage.StorageBinaryFiles.Add(DateTime.Now, array);
                 }
 
                 isSaveSuccess = true;

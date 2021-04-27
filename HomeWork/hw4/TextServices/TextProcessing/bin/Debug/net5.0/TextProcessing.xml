@@ -9,10 +9,32 @@
             FindServiceController
             </summary>
         </member>
-        <member name="M:TextProcessing.Controllers.FindServiceController.GetListTexts">
+        <member name="M:TextProcessing.Controllers.FindServiceController.GetWordsByMask(System.Int32,System.String[])">
             <summary>
-            Получить список всех текстов из локального хранилища22
+            Подсчет количества слов в тексте по заданному id из принимаемого массива слов
             </summary>
+            <param name="id">Универсальный идентификатор текста</param>
+            <param name="setWords">Набор слов для поиска</param>
+        </member>
+        <member name="T:TextProcessing.Controllers.TaskServiceController">
+            <summary>
+            TaskServiceController
+            </summary>
+        </member>
+        <member name="M:TextProcessing.Controllers.TaskServiceController.StartWorkflow(System.DateTime,System.DateTime,System.Int32,System.String[])">
+            <summary>
+            Запуск задачи на обработку файлов
+            </summary>
+            <param name="dateStart">Начальная дата запуска задания. Пример: 2021-04-24T08:19:14.488Z</param>
+            <param name="dateFinish">Конечная дата запуска задания. Пример: 2021-04-26T08:19:14.488Z</param>
+            <param name="interval">Интервал (мин)</param>
+            <param name="setWords">Набор слов для поиска</param>
+        </member>
+        <member name="M:TextProcessing.Controllers.TaskServiceController.GetDataById(System.Int32)">
+            <summary>
+            Результаты работ по заданию c указанным id
+            </summary>
+            <param name="id">Универсальный идентификатор задания</param>
         </member>
         <member name="T:TextProcessing.Controllers.TextServiceController">
             <summary>
@@ -28,22 +50,26 @@
             <summary>
             Получить текст из локального хранилища по id
             </summary>
+            <param name="id">Универсальный идентификатор текста</param>
         </member>
         <member name="M:TextProcessing.Controllers.TextServiceController.PostText(System.String)">
             <summary>
             Сохранить текст в локальное хранилище
             </summary>
+            <param name="info">Текст для сохранения в локальном хранилище</param>
         </member>
         <member name="M:TextProcessing.Controllers.TextServiceController.UploadFile(Microsoft.AspNetCore.Http.IFormFile,System.Threading.CancellationToken)">
             <summary>
             Загрузить текстовый файл с компьютера в локальное хранилище
             </summary>
+            <param name="file">Файл для загрузки в хранилище</param>
         </member>
         <member name="M:TextProcessing.Controllers.TextServiceController.UploadFileUrl(System.String,System.Threading.CancellationToken)">
             <summary>
             Загрузить текстовый файл по url ссылке в локальное хранилище
             Пример текстового файла: https://filesamples.com/samples/document/txt/sample3.txt
             </summary>
+            <param name="file">Ccылка на url для загрузки файла в хранилище</param>
         </member>
     </members>
 </doc>
