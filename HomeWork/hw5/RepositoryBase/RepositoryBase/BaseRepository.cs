@@ -173,7 +173,7 @@ namespace RepositoryBase
             {
                 await db.OpenAsync();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 db.Dispose();
                 throw;
