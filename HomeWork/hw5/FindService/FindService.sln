@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindService", "FindService\FindService.csproj", "{0ED90E6B-4B59-4644-8519-DAD00406A960}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextService.Client", "..\TextService\TextService.Client\TextService.Client.csproj", "{3E8AACD6-3608-48FD-AEA1-B4AEABDFA91C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0ED90E6B-4B59-4644-8519-DAD00406A960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED90E6B-4B59-4644-8519-DAD00406A960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED90E6B-4B59-4644-8519-DAD00406A960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED90E6B-4B59-4644-8519-DAD00406A960}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E8AACD6-3608-48FD-AEA1-B4AEABDFA91C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E8AACD6-3608-48FD-AEA1-B4AEABDFA91C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E8AACD6-3608-48FD-AEA1-B4AEABDFA91C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E8AACD6-3608-48FD-AEA1-B4AEABDFA91C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CCBC7496-1CBE-418B-BAD1-A52F3FEAE599}
+	EndGlobalSection
+EndGlobal
