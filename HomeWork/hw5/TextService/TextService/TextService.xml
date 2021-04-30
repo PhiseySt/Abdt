@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TextService</name>
+    </assembly>
+    <members>
+        <member name="M:TextService.Controllers.TextController.PostFileUrl(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Загрузить текстовый файл по url ссылке в локальное хранилище
+            Пример текстового файла: https://filesamples.com/samples/document/txt/sample3.txt
+            </summary>
+            <param name="textFileUrl">Ccылка на url для загрузки файла в хранилище</param>
+            <param name="cancellationToken">Токен отмены операции</param>
+        </member>
+    </members>
+</doc>

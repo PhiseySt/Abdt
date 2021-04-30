@@ -4,8 +4,13 @@
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>553636b4-594c-4ae8-829c-a0ed428dd934</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <NoWarn>1701;1702</NoWarn>
+    <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Stas\Stas\НефтеБой\userscript\Abdt\HomeWork\hw5\TextService\TextService\TextService.xml</DocumentationFile>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />

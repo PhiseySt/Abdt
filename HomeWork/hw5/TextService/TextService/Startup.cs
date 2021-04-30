@@ -1,3 +1,6 @@
+using System;
+using System.IO;
+using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -27,6 +30,7 @@ namespace TextService
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TextService", Version = "v1" });
             });
+            services.AddSwaggerGen(options => options.IncludeXmlComments("D:\\Stas\\Stas\\НефтеБой\\userscript\\Abdt\\HomeWork\\hw5\\TextService\\TextService\\TextService.xml"));
 
             services.AddTextDbOption(Configuration);
             services.AddTransient<ITextRepository, TextRepository>();
