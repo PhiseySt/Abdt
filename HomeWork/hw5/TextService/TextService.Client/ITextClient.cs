@@ -1,7 +1,9 @@
 ﻿using System;
-using System.IO;
+using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Refit;
+using Microsoft.AspNetCore.Http;
 using TextService.Entities;
 
 namespace TextService.Client
@@ -10,11 +12,13 @@ namespace TextService.Client
     {
         [Get("/text/{id}")]
         Task<TextFile> GetById(Guid id);
+        [Get("/text/getall")]
+        Task<IEnumerable<TextFile>> GetAll();
         [Post("/text")]
         Task<TextFile> Post([Body] string text);
-        [Post("/text/file/{streamTextFile}")]
-        Task<TextFile> PostFile(Stream streamTextFile);
-        [Post("/text/url/{fileUrl}")]
-        Task<TextFile> PostFileUrl([Body]string fileUrl);
+        [Post("/text/url")]
+        Task<TextFile> AddFileByUrl(string textFileUrl, CancellationToken cancellationToken);
+        [Post("/text/upload")]
+        Task<TextFile> UploadFile(IFormFile file);
     }
 }
