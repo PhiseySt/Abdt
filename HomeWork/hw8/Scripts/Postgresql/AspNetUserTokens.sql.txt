@@ -1,0 +1,18 @@
+USE [AuthDb]
+GO
+
+/****** Объект: Table [dbo].[AspNetUserTokens] Дата скрипта: 20.05.2021 6:38:10 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[AspNetUserTokens] (
+    [UserId]        NVARCHAR (450) NOT NULL,
+    [LoginProvider] NVARCHAR (450) NOT NULL,
+    [Name]          NVARCHAR (450) NOT NULL,
+    [Value]         NVARCHAR (MAX) NULL
+);
+
+
