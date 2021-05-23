@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Refit" Version="6.0.38" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TaskService.Entities\TaskService.Entities.csproj" />
+    <ProjectReference Include="..\TaskService.Services\TaskService.Services.csproj" />
+    <ProjectReference Include="..\..\AuthenticationBase\AuthenticationBase\AuthenticationBase.csproj" />
+  </ItemGroup>
+
+</Project>
