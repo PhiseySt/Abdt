@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Copyright>Stanislav Fiseisky</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Refit" Version="6.0.38" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\TextService\TextService.Entities\TextService.Entities.csproj" />
+    <ProjectReference Include="..\..\AuthenticationBase\AuthenticationBase\AuthenticationBase.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AuthenticationService.Entities">
+      <HintPath>..\..\AuthenticationService\AuthenticationService.Entities\bin\Debug\net5.0\ref\AuthenticationService.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="AuthenticationService.Services">
+      <HintPath>..\..\AuthenticationService\AuthenticationService.Services\bin\Debug\net5.0\ref\AuthenticationService.Services.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
