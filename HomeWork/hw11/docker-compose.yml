@@ -1,0 +1,70 @@
+version: '3.6'
+
+services:
+  authenticationservice:
+    container_name: authenticationservice
+    ports:
+      - 90000:80
+      - 90001:443
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=12345678
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/abct2.pfx
+    volumes:
+      - ~/.aspnet/https:/https:ro
+    build:
+      context: .
+      dockerfile: AuthenticationService/AuthenticationService/Dockerfile
+    restart: on-failure
+    
+  textservice:
+    container_name: textservice
+    ports:
+      - 90010:80
+      - 90011:443
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=12345678
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/abct2.pfx
+    volumes:
+      - ~/.aspnet/https:/https:ro
+    build:
+      context: .
+      dockerfile: TextService/TextService/Dockerfile
+    restart: on-failure
+
+  findservice:
+    container_name: findservice
+    ports:
+      - 90020:80
+      - 90021:443
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=12345678
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/abct2.pfx
+    volumes:
+      - ~/.aspnet/https:/https:ro
+    build:
+      context: .
+      dockerfile: FindService/FindService/Dockerfile
+    restart: on-failure
+    
+  taskservice:
+    container_name: taskservice
+    ports:
+      - 90030:80
+      - 90031:443
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=12345678
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/abct2.pfx
+    volumes:
+      - ~/.aspnet/https:/https:ro
+    build:
+      context: .
+      dockerfile: TaskService/TaskService/Dockerfile
+    restart: on-failure
