@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Openweathermap.Client;
@@ -34,8 +35,11 @@ namespace Openweathermap.Controllers
         public WeatherModel GetWeatherTemperature(string cityName="Kazan", string metric = "celsius")
         {
             WeatherClient client = new WeatherClient(m_accessKey);
-            OpenWeatherMapModel resourceData = new OpenWeatherMapModel();
-            resourceData = client.GetCurrentWeatherAsync<OpenWeatherMapModel>(cityName, "en").Result;
+            var resourceData = client.GetCurrentWeatherAsync<OpenWeatherMapModel>(cityName, "en").Result;
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<OpenWeatherMapModel, LogInfo>());
+            var mapper = new Mapper(config);
+            var logInfo = mapper.Map<LogInfo>(resourceData);
+            _logger.LogInformation(logInfo.ToString());
             var resultTemperature = metric.Equals("celsius") ? resourceData.Main.Temp : MetricHelper.CToF(resourceData.Main.Temp);
             var resultData = new WeatherModel
             {
@@ -57,6 +61,10 @@ namespace Openweathermap.Controllers
             WeatherClient client = new WeatherClient(m_accessKey);
             OpenWeatherMapModel resourceData = new OpenWeatherMapModel();
             resourceData = client.GetCurrentWeatherAsync<OpenWeatherMapModel>(cityName, "en").Result;
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<OpenWeatherMapModel, LogInfo>());
+            var mapper = new Mapper(config);
+            var logInfo = mapper.Map<LogInfo>(resourceData);
+            _logger.LogInformation(logInfo.ToString());
             var resultData = new WindModel
             {
                 City = cityName,
@@ -73,6 +81,7 @@ namespace Openweathermap.Controllers
         [HttpGet]
         public IEnumerable<WeatherModel> GetWeatherTemperatures5Days(string cityName = "Kazan", string metric = "celsius")
         {
+   
             WeatherClient client = new WeatherClient(m_accessKey);
             var resourceData = client.GetFiveDayForecastApiAsync<WeatherFiveDaysData>(cityName, "en").Result;
             var listWheather = resourceData.list;
@@ -80,7 +89,6 @@ namespace Openweathermap.Controllers
             {
                 WeatherFiveDays = new List<WeatherModel>()
             };
-
 
             foreach (var itemWheather in listWheather) 
             {

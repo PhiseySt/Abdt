@@ -50,3 +50,4 @@ D:\Mydoc\AbdtHome\HomeWork\WheatherProject\Openweathermap\obj\Debug\net5.0\ref\O
 D:\Mydoc\AbdtHome\HomeWork\WheatherProject\Openweathermap\obj\Debug\net5.0\Openweathermap.pdb
 D:\Mydoc\AbdtHome\HomeWork\WheatherProject\Openweathermap\obj\Debug\net5.0\Openweathermap.genruntimeconfig.cache
 D:\Mydoc\AbdtHome\HomeWork\WheatherProject\Openweathermap\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Mydoc\AbdtHome\HomeWork\WheatherProject\Openweathermap\bin\Debug\net5.0\AutoMapper.dll
