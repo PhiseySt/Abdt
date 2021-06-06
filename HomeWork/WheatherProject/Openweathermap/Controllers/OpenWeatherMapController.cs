@@ -1,11 +1,8 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Openweathermap.Client;
-using Openweathermap.Helpers;
 using Openweathermap.Models;
-using System;
 using System.Collections.Generic;
 
 
@@ -35,20 +32,9 @@ namespace Openweathermap.Controllers
         public WeatherModel GetWeatherTemperature(string cityName="Kazan", string metric = "celsius")
         {
             WeatherClient client = new WeatherClient(m_accessKey);
-            var resourceData = client.GetCurrentWeatherAsync<OpenWeatherMapModel>(cityName, "en").Result;
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<OpenWeatherMapModel, LogInfo>());
-            var mapper = new Mapper(config);
-            var logInfo = mapper.Map<LogInfo>(resourceData);
-            _logger.LogInformation(logInfo.ToString());
-            var resultTemperature = metric.Equals("celsius") ? resourceData.Main.Temp : MetricHelper.CToF(resourceData.Main.Temp);
-            var resultData = new WeatherModel
-            {
-                City = cityName,
-                Temperature = resultTemperature,
-                Date = DateTime.Now.ToString(),
-                TemperatureMetric = metric
-            };
-            return resultData;
+            var resourceData = client.GetCurrentWeatherSourceDataAsync<OpenWeatherMapModel>(cityName, "en").Result;
+            var resultData = client.GetCurrentWeatherResultDataAsync(_logger, cityName, metric, resourceData);
+            return resultData.Result;
         }
 
         /// <summary>
@@ -59,19 +45,9 @@ namespace Openweathermap.Controllers
         public WindModel GetWeatherWind(string cityName = "Kazan")
         {
             WeatherClient client = new WeatherClient(m_accessKey);
-            OpenWeatherMapModel resourceData = new OpenWeatherMapModel();
-            resourceData = client.GetCurrentWeatherAsync<OpenWeatherMapModel>(cityName, "en").Result;
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<OpenWeatherMapModel, LogInfo>());
-            var mapper = new Mapper(config);
-            var logInfo = mapper.Map<LogInfo>(resourceData);
-            _logger.LogInformation(logInfo.ToString());
-            var resultData = new WindModel
-            {
-                City = cityName,
-                Speed = resourceData.Wind.Speed,
-                Direction = WindDirectionHelper.FormatWindDirection(resourceData.Wind.WindDirection)
-            };
-            return resultData;
+            var resourceData = client.GetCurrentWeatherSourceDataAsync<OpenWeatherMapModel>(cityName, "en").Result;
+            var resultData = client.GetCurrentWindResultDataAsync(_logger, cityName, resourceData);
+            return resultData.Result;
         }
 
         /// <summary>
@@ -84,26 +60,8 @@ namespace Openweathermap.Controllers
    
             WeatherClient client = new WeatherClient(m_accessKey);
             var resourceData = client.GetFiveDayForecastApiAsync<WeatherFiveDaysData>(cityName, "en").Result;
-            var listWheather = resourceData.list;
-            var weatherFiveDaysModel = new WeatherFiveDaysModel
-            {
-                WeatherFiveDays = new List<WeatherModel>()
-            };
-
-            foreach (var itemWheather in listWheather) 
-            {
-                var resultTemperature = metric.Equals("celsius") ? itemWheather.main.Temp : MetricHelper.CToF(itemWheather.main.Temp);
-
-                var resultData = new WeatherModel
-                {
-                    City = cityName,
-                    Temperature = resultTemperature,
-                    Date = itemWheather.dt_txt,
-                    TemperatureMetric = metric
-                };
-                weatherFiveDaysModel.WeatherFiveDays.Add(resultData);
-            }
-            return weatherFiveDaysModel.WeatherFiveDays;
+            var resultData = client.GetWeather5DaysResultDataAsync(_logger, cityName, metric, resourceData);
+            return resultData.Result;
         }
     }
 }
